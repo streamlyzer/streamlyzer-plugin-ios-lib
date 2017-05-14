@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/StreamlyzerPlugin-Swift.h</key>
 		<data>
-		LpXa7hFZsy8DIzk3LGXnG2kkVZs=
+		MerN1sDi5LGTmRZ1kMlXGr0FG7k=
 		</data>
 		<key>Headers/StreamlyzerPlugin.h</key>
 		<data>
@@ -42,23 +42,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		S3QIG0rPBzfMqDY+/1jPP9BBWWA=
+		Y0D3MTd9Gca3BNmDQf/Xp14HncA=
 		</data>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/i386.swiftdoc</key>
 		<data>
-		LSFw0kPybpwSOfbPCaS34DkYeQQ=
+		89L6jwQdOn95N+DycOjWhcXDeVY=
 		</data>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/i386.swiftmodule</key>
 		<data>
-		OmQanumWwcW3gzuAVm3t68CcqXc=
+		kNvi6+ims6xbkzHtvPqdAcIRzgc=
 		</data>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		iIosYfh7vFStwjfSFhJcYQ+iYgE=
+		aJgCZFnrTMM5rJ8WlHl/+/lkgzo=
 		</data>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		lwEViZet2SjidTuawTDz2a91PDk=
+		i7XJpMidTqdLFOgmzpSBaHK/P7g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -148,11 +148,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LpXa7hFZsy8DIzk3LGXnG2kkVZs=
+			MerN1sDi5LGTmRZ1kMlXGr0FG7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			nHqO8+Uj0CbcTOI6Ykh1ftj3G+cchG4kcXi+31P38N0=
+			IbotXuc0vG3cHT8Gx7U0QxnV2tofaGBGk4Ryw5SNLMg=
 			</data>
 		</dict>
 		<key>Headers/StreamlyzerPlugin.h</key>
@@ -170,44 +170,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LSFw0kPybpwSOfbPCaS34DkYeQQ=
+			89L6jwQdOn95N+DycOjWhcXDeVY=
 			</data>
 			<key>hash2</key>
 			<data>
-			v8yxiCgnvD+fCFGcgyl7PGzYm5eh4SkpCa/18XA7zzU=
+			eYGDcYAI/sVRhVmkb+zWOHs7srLHSs8drx3IKrQS3J0=
 			</data>
 		</dict>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OmQanumWwcW3gzuAVm3t68CcqXc=
+			kNvi6+ims6xbkzHtvPqdAcIRzgc=
 			</data>
 			<key>hash2</key>
 			<data>
-			w73+/dJLmHPEnPJVelTmihDqiHT/pCBeFds4C82aPEI=
+			2Y4UftVBaHd6dp/EPMMnJU4uTlcVelHXWrDfsIkER7U=
 			</data>
 		</dict>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iIosYfh7vFStwjfSFhJcYQ+iYgE=
+			aJgCZFnrTMM5rJ8WlHl/+/lkgzo=
 			</data>
 			<key>hash2</key>
 			<data>
-			8RQIsx0qGFvhHQLBNcb9WhmO9f89g58Zl8BE3AHp0hw=
+			dZJXGVwf+YqYMqF0CGetf7KdjWseo8SD0P5jX6r6Q8g=
 			</data>
 		</dict>
 		<key>Modules/StreamlyzerPlugin.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lwEViZet2SjidTuawTDz2a91PDk=
+			i7XJpMidTqdLFOgmzpSBaHK/P7g=
 			</data>
 			<key>hash2</key>
 			<data>
-			agNG/coCOEi9zOHRd3jywR4g6tAL+X9f44nQr3I7Ezc=
+			l5rKmjDGo5FA0j9ld2GikMokxDXB/twQfk6BJwyZtAY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
