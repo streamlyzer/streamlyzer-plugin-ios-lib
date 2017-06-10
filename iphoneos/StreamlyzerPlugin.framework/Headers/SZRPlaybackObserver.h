@@ -2,6 +2,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "SZRObserver.h"
 #import "SZRPluginPlaybackEventDelegate.h"
+#import "SZRPlaybackObserver.h"
 
 typedef NS_ENUM(NSUInteger, SZRPlayerType) {
     SZRPlayerTypeGeneric
@@ -9,28 +10,12 @@ typedef NS_ENUM(NSUInteger, SZRPlayerType) {
     , SZRPlayerTypeMPMoviePlayer
 };
 
-typedef NS_OPTIONS(NSUInteger, SZRLoadState) {
-    SZRLoadStateUnknown        = 0,
-    SZRLoadStatePlayable       = 1 << 0,
-    SZRLoadStatePlaythroughOK  = 1 << 1, // Playback will be automatically started in this state when shouldAutoplay is YES
-    SZRLoadStateStalled        = 1 << 2, // Playback will be automatically paused in this state, if started
-};
-
-typedef NS_ENUM(NSInteger, SZRPlaybackState) {
-    SZRPlaybackStateStopped,
-    SZRPlaybackStatePlaying,
-    SZRPlaybackStatePaused,
-    SZRPlaybackStateInterrupted,
-    SZRPlaybackStateSeekingForward,
-    SZRPlaybackStateSeekingBackward
-};
-
 @interface SZRPlaybackObserver : NSObject
 <SZRObserver, SZRPluginPlaybackEventDelegate>
 {
 }
 
-@property id<SZRPluginPlaybackEventDelegate> delegate;
+@property (weak) id<SZRPluginPlaybackEventDelegate> delegate;
 
 /**
  @brief This method shall be called when media player is initiated
@@ -40,15 +25,20 @@ typedef NS_ENUM(NSInteger, SZRPlaybackState) {
 /**
  * @brief This method shall be called when media player is loaded
  */
--(void) onPlayerLoad:(SZRPlayerType) playerType;
+-(void) onPlayerLoad;
 /**
  @brief This method shall be called when media player is ready to play
  */
 -(void) onPlayerReady;
 /**
- @brief This method shall be called when media player is started to play
+ @brief This method shall be called when trying to play
  */
 -(void) onPlayerPlay;
+/**
+ @brief This method shall be called when media player is started to play
+ */
+-(void) onPlayerPlaying;
+
 /**
  @brief This method shall be called when media player is paused
  */
@@ -72,6 +62,11 @@ typedef NS_ENUM(NSInteger, SZRPlaybackState) {
  @param bitrate It shall be "kpbs" unit. For example, bit rate is 512kbp. this parameter shall be 512
  */
 -(void) onPlayerBitrateChange : (NSInteger) bitrate;
+/**
+ @brief This method shall be called when resolution of video is changed
+ 
+ */
+-(void) onPlayerResolutionChange;
 /**
  @brief This method shall be called when buffering is started during playback
  */
@@ -101,33 +96,6 @@ typedef NS_ENUM(NSInteger, SZRPlaybackState) {
  */
 -(void) onPlayNext;
 //
-/**
- * methods for Generic Player
- */
-- (void) onPlayerStateUpdateGP:(NSInteger) playbackState withLoadState:(NSUInteger) loadState;
-
-- (void) onPlayerIsPreparedToPlayNotificationGP;
-
-- (void) onPlayerFinishWithError:(NSError *)error;
-
-//
-/**
- * methods for AVPlayer
- */
-- (void) setAVPlayerItemCB;
-
-- (void) resetAVPlayerItemCB;
-
-- (void) AVPlayerObserverCB:(NSString *) keyPath withRate:(float)rate withStatus:(NSInteger)status;
-
-- (void) AVPlayerItemObserverCB:(NSString *) keyPath withPlaybackLikelyToKeepUp:(BOOL)playbackLikelyToKeepUp
-         withPlaybackBufferFull:(BOOL)playbackBufferFull withPlaybackBufferEmpty:(BOOL)playbackBufferEmpty;
-
-- (void) AVPlayerAccessLogCB:(NSString *)URI withPlaybackType:(NSString *)playbackType
-           withSwitchBitrate:(double) switchBitrate withObservedBitrate:(double) observedBitrate withIndicatedBitrate:(double) indicatedBitrate;
-
--(void) AVPlayerItemFailedToPlayToEndTimeNotificationCB:(NSNotification *) notification withKey:(NSString *) avPlayerItemFailedToPlayToEndTimeErrorKey;
-
 @end
 
 
