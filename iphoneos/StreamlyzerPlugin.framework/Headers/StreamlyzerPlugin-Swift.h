@@ -139,30 +139,60 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class StreamlyzerPluginProperty;
+
+/// @class This class is used to track referred page and current pages
+/// It allows you to track page movements on your app.
+SWIFT_CLASS("_TtC17StreamlyzerPlugin24STLZPageReferrerObserver")
+@interface STLZPageReferrerObserver : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// @brief Setup properties as it needed
+/// @param properties STLZPluginProperty containing propertiesplaybackObserver
+- (void)setPropertiesWithProperties:(StreamlyzerPluginProperty * _Nonnull)properties;
+/// @brief track where it content is being shared
+/// @param eventGroup The group name of this event associated with this content
+/// @param destination You can enter the name of sharing servie such as facebook, twitter, googleplus, pinterest, livejournal
+- (void)postEventWithReferrerHostName:(NSString * _Nonnull)referrerHostName referrerPagePath:(NSString * _Nonnull)referrerPagePath currentPagePath:(NSString * _Nonnull)currentPagePath;
+@end
+
+@protocol StreamlyzerPluginDelegate;
 @class AVPlayer;
 
-/// Streamlyzer iOS/tvOS Plugin
-SWIFT_CLASS("_TtC17StreamlyzerPlugin17StreamlyzerPlugin")
-@interface StreamlyzerPlugin : NSObject <SZRPluginPlaybackEventDelegate>
+SWIFT_CLASS("_TtC17StreamlyzerPlugin20STLZPlaybackObserver")
+@interface STLZPlaybackObserver : NSObject <SZRPluginPlaybackEventDelegate>
+@property (nonatomic, weak) id <StreamlyzerPluginDelegate> _Nullable delegate;
 /// @brief Initialize Streamlyzer Plugin when media player starts to load
 /// Streamlyzer plugin will start to measure media player loading time
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)setDebugModeWithFlag:(BOOL)flag;
 - (void)setDevModeWithFlag:(BOOL)flag;
+- (void)setUrlWithUrl:(NSString * _Nonnull)url;
 /// @brief Initialize Streamlyzer Plugin with AVPlayer
 /// If AVPlayer class is used for media player in the application, it will make you easier to integrate
 /// @param player AVPlayer to be used for media playback
 - (nonnull instancetype)initWithPlayer:(AVPlayer * _Nonnull)player OBJC_DESIGNATED_INITIALIZER;
+/// @brief Setup properties as it needed
+/// @param properties STLZPluginProperty containing propertiesplaybackObserver
+- (void)setPropertiesWithProperties:(StreamlyzerPluginProperty * _Nonnull)properties;
+/// @brief Setup properties as it needed
+/// @param properties STLZPluginProperty containing propertiesplaybackObserver
+- (void)setPropertiesWithPluginProperty:(StreamlyzerPluginProperty * _Nonnull)pluginProperty;
+/// @brief Set delegate functions
+- (void)setDelegateWithDelegate:(id <StreamlyzerPluginDelegate> _Nonnull)delegate;
 /// @brief Setup properties as it needed
 /// @param properties properties as [String : Any] format
 - (void)setPropertiesWithStringProperty:(NSDictionary<NSString *, id> * _Nullable)stringProperty;
 /// @brief This method shall be called when media player starts to initialize
 /// Streamlyzer plugin will start its task ans to measure player loading or initialization time
 - (void)onInitialization;
+/// @brief This method shall  be called when it starts to load media player
+- (void)onPlayerLoadStart;
 /// @brief This method shall be called when media player is ready to play
 - (void)onPlayerReady;
 /// @brief This method shall be called when media player is started to play or play button is pressed
 - (void)onPlayerPlay;
+/// @brief This method is called when media player start to play or when the first frame is rendered
+- (void)onPlayerPlaying;
 /// @brief This method shall be called when media player is paused or pause button is pressed
 - (void)onPlayerPause;
 /// @brief This method shall be called when the seek is started or seek button is pressed
@@ -174,7 +204,10 @@ SWIFT_CLASS("_TtC17StreamlyzerPlugin17StreamlyzerPlugin")
 - (void)onPlayerSeeked;
 /// @brief This method shall be called when bit rate of video is changed
 /// @param bitRate It shall be “kpbs” unit. For example, bit rate is 512kbp. this parameter shall be 512
-- (void)onPlayerBitrateChangeWithBitRate:(NSInteger)bitRate;
+- (void)onPlayerBitrateChange;
+/// @brief This method shall be called when video rendering resolution is changed
+/// @param resolution
+- (void)onPlayerResolutionChange;
 /// @brief This method shall be called when buffering is started during playback.
 /// In usual, this method is called when play button is pressed.
 - (void)onBufferingStart;
@@ -202,6 +235,118 @@ SWIFT_CLASS("_TtC17StreamlyzerPlugin17StreamlyzerPlugin")
 /// @Brief Get the total length of video
 /// @return The total length of the video in millisecond
 - (NSInteger)getDuration SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+/// @class This class is used to track where your contents are shared to
+SWIFT_CLASS("_TtC17StreamlyzerPlugin25STLZSharedContentObserver")
+@interface STLZSharedContentObserver : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// @brief Setup properties as it needed
+/// @param properties STLZPluginProperty containing propertiesplaybackObserver
+- (void)setPropertiesWithProperties:(StreamlyzerPluginProperty * _Nonnull)properties;
+/// @brief track where it content is being shared
+/// @param eventGroup The group name of this event associated with this content
+/// @param destination You can enter the name of sharing servie such as facebook, twitter, googleplus, pinterest, livejournal
+- (void)postEventWithEventGroup:(NSString * _Nonnull)eventGroup destination:(NSString * _Nonnull)destination;
+@end
+
+
+/// @class This class is used for user defined events
+/// It allows you to define any events to be tracked.
+SWIFT_CLASS("_TtC17StreamlyzerPlugin23STLZUserDefinedObserver")
+@interface STLZUserDefinedObserver : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// @brief Setup properties as it needed
+/// @param properties STLZPluginProperty containing propertiesplaybackObserver
+- (void)setPropertiesWithProperties:(StreamlyzerPluginProperty * _Nonnull)properties;
+/// @brief This method is used to post user defined events to be counted
+/// @param eventGroup Group name of event
+/// @param eventName Name of event
+- (void)postCountEventWithEventGroup:(NSString * _Nonnull)eventGroup eventName:(NSString * _Nonnull)eventName;
+/// @brief This method is used to post user defined events to be added
+/// @param eventGroup Group name of event
+/// @param eventName Name of event
+- (void)postSumEventWithEventGroup:(NSString * _Nonnull)eventGroup eventName:(NSString * _Nonnull)eventName value:(NSInteger)value;
+/// @brief This method is used to post user defined events to be added as the revenue
+/// @param eventGroup Group name of event
+/// @param eventName Name of event
+- (void)postRevenueEventWithEventGroup:(NSString * _Nonnull)eventGroup eventName:(NSString * _Nonnull)eventName value:(float)value;
+@end
+
+
+/// Streamlyzer iOS/tvOS Plugin
+SWIFT_CLASS("_TtC17StreamlyzerPlugin17StreamlyzerPlugin")
+@interface StreamlyzerPlugin : NSObject
+@property (nonatomic, strong) STLZPlaybackObserver * _Nonnull playbackObserver;
+@property (nonatomic, strong) STLZUserDefinedObserver * _Nonnull userDefinedObserver;
+@property (nonatomic, strong) STLZPageReferrerObserver * _Nonnull pageReferrerObserver;
+@property (nonatomic, strong) STLZSharedContentObserver * _Nonnull sharedContentObserver;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)setDelegateWithDelegate:(id <StreamlyzerPluginDelegate> _Nonnull)delegate;
+/// Get Playback observer from Streamlyzer Plugin
+/// @return Playback Observer object
+- (STLZPlaybackObserver * _Nonnull)getPlaybackObserver SWIFT_WARN_UNUSED_RESULT;
+/// Get User defined event observer from Streamlyzer Plugin
+/// @return User define observer object
+- (STLZUserDefinedObserver * _Nonnull)getUserDefinedObserver SWIFT_WARN_UNUSED_RESULT;
+/// Get page referrer observer from Streamlyzer Plugin
+/// @return Page referrer observer object
+- (STLZPageReferrerObserver * _Nonnull)getPageReferrerObserver SWIFT_WARN_UNUSED_RESULT;
+/// Get shared content observer from Streamlyzder Plugin
+/// @return shared content observer object
+- (STLZSharedContentObserver * _Nonnull)getSharedContentObserver SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_PROTOCOL("_TtP17StreamlyzerPlugin25StreamlyzerPluginDelegate_")
+@protocol StreamlyzerPluginDelegate
+@optional
+- (NSInteger)getPosition SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)getBitrate SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getResolution SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)getDuration SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+/// Define Streamlzyer Plugin properties
+/// To avoid typo in key name, simply setter and getter of each properties are kindly provided
+SWIFT_CLASS("_TtC17StreamlyzerPlugin25StreamlyzerPluginProperty")
+@interface StreamlyzerPluginProperty : NSObject
+/// Define properties array and assign default values to each properties
+@property (nonatomic, copy) NSDictionary * _Nonnull properties;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Define setter and getter of each properties
+@property (nonatomic, copy) NSString * _Nonnull customerKey;
+@property (nonatomic, copy) NSString * _Nonnull userType;
+@property (nonatomic, copy) NSString * _Nonnull userId;
+@property (nonatomic, copy) NSString * _Nonnull gender;
+@property (nonatomic, copy) NSString * _Nonnull yearOfBirth;
+@property (nonatomic, copy) NSString * _Nonnull serviceType;
+@property (nonatomic, copy) NSString * _Nonnull sessionId;
+@property (nonatomic, copy) NSString * _Nonnull streamingServerName;
+@property (nonatomic, copy) NSString * _Nonnull abTestMark;
+@property (nonatomic) BOOL live;
+@property (nonatomic, copy) NSString * _Nonnull thumbnailImage;
+@property (nonatomic, copy) NSString * _Nonnull seriesID;
+@property (nonatomic, copy) NSString * _Nonnull seriesName;
+@property (nonatomic, copy) NSString * _Nonnull seasonID;
+@property (nonatomic, copy) NSString * _Nonnull seasonName;
+@property (nonatomic, copy) NSString * _Nonnull episodeID;
+@property (nonatomic, copy) NSString * _Nonnull episodeName;
+@property (nonatomic, copy) NSString * _Nonnull liveChannelName;
+@property (nonatomic, copy) NSString * _Nonnull movieId;
+@property (nonatomic, copy) NSString * _Nonnull movieCategory;
+@property (nonatomic, copy) NSString * _Nonnull movieSubcategory;
+@property (nonatomic, copy) NSString * _Nonnull movieContentsProvider;
+@property (nonatomic, copy) NSString * _Nonnull movieRate;
+@property (nonatomic, copy) NSString * _Nonnull audioLanguage;
+@property (nonatomic, copy) NSString * _Nonnull subtitileLanguage;
+@property (nonatomic, copy) NSString * _Nonnull playerPlatformVersion;
+@property (nonatomic, copy) NSString * _Nonnull mediaPlayerVersion;
+@property (nonatomic, copy) NSString * _Nonnull platformName;
+@property (nonatomic, copy) NSString * _Nonnull applicationName;
+@property (nonatomic, copy) NSString * _Nonnull applicationVersion;
 @end
 
 #pragma clang diagnostic pop

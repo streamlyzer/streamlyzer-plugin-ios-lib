@@ -16,5 +16,6 @@
 +(void) initPlugin;
 +(void) setDevMode:(BOOL)mode;
 +(void) setDebugMode :(BOOL) mode;
++(void) setUrl : (NSString *) url;
 
 @end
