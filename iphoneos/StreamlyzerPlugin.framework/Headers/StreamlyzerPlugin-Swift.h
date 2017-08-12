@@ -174,16 +174,13 @@ SWIFT_CLASS("_TtC17StreamlyzerPlugin20STLZPlaybackObserver")
 /// @brief Setup properties as it needed
 /// @param properties STLZPluginProperty containing propertiesplaybackObserver
 - (void)setPropertiesWithProperties:(StreamlyzerPluginProperty * _Nonnull)properties;
-/// @brief Setup properties as it needed
-/// @param properties STLZPluginProperty containing propertiesplaybackObserver
-- (void)setPropertiesWithPluginProperty:(StreamlyzerPluginProperty * _Nonnull)pluginProperty;
 /// @brief Set delegate functions
 - (void)setDelegateWithDelegate:(id <StreamlyzerPluginDelegate> _Nonnull)delegate;
 /// @brief Setup properties as it needed
 /// @param properties properties as [String : Any] format
 - (void)setPropertiesWithStringProperty:(NSDictionary<NSString *, id> * _Nullable)stringProperty;
 /// @brief This method shall be called when media player starts to initialize
-/// Streamlyzer plugin will start its task ans to measure player loading or initialization time
+/// Streamlyzer plugin will start its task and to measure player loading or initialization time
 - (void)onInitialization;
 /// @brief This method shall  be called when it starts to load media player
 - (void)onPlayerLoadStart;
@@ -320,6 +317,7 @@ SWIFT_CLASS("_TtC17StreamlyzerPlugin25StreamlyzerPluginProperty")
 @property (nonatomic, copy) NSString * _Nonnull customerKey;
 @property (nonatomic, copy) NSString * _Nonnull userType;
 @property (nonatomic, copy) NSString * _Nonnull userId;
+@property (nonatomic, copy) NSString * _Nonnull userEmail;
 @property (nonatomic, copy) NSString * _Nonnull gender;
 @property (nonatomic, copy) NSString * _Nonnull yearOfBirth;
 @property (nonatomic, copy) NSString * _Nonnull serviceType;
@@ -328,14 +326,16 @@ SWIFT_CLASS("_TtC17StreamlyzerPlugin25StreamlyzerPluginProperty")
 @property (nonatomic, copy) NSString * _Nonnull abTestMark;
 @property (nonatomic) BOOL live;
 @property (nonatomic, copy) NSString * _Nonnull thumbnailImage;
-@property (nonatomic, copy) NSString * _Nonnull seriesID;
+@property (nonatomic, copy) NSString * _Nonnull seriesId;
 @property (nonatomic, copy) NSString * _Nonnull seriesName;
-@property (nonatomic, copy) NSString * _Nonnull seasonID;
+@property (nonatomic, copy) NSString * _Nonnull seasonId;
 @property (nonatomic, copy) NSString * _Nonnull seasonName;
-@property (nonatomic, copy) NSString * _Nonnull episodeID;
+@property (nonatomic, copy) NSString * _Nonnull episodeId;
 @property (nonatomic, copy) NSString * _Nonnull episodeName;
+@property (nonatomic, copy) NSString * _Nonnull liveChannelId;
 @property (nonatomic, copy) NSString * _Nonnull liveChannelName;
 @property (nonatomic, copy) NSString * _Nonnull movieId;
+@property (nonatomic, copy) NSString * _Nonnull movieName;
 @property (nonatomic, copy) NSString * _Nonnull movieCategory;
 @property (nonatomic, copy) NSString * _Nonnull movieSubcategory;
 @property (nonatomic, copy) NSString * _Nonnull movieContentsProvider;
