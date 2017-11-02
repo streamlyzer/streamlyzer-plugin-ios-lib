@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/StreamlyzerPlugintvOS-Swift.h</key>
 		<data>
-		M5VQSdvAvqcHaHI4CffDhe/1h3M=
+		d1sr37wFGuSA7MK32vyK5T507mc=
 		</data>
 		<key>Headers/StreamlyzerPlugintvOS.h</key>
 		<data>
@@ -42,15 +42,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DHSn9ZQtyOTWJ3dN7tTTsNP/z18=
+		k0xcD4DEw4otFQyU1LqbDP5VyHM=
 		</data>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		DJ7fVQSCkNtLV2jMNBcXI6T/jyU=
+		efd3PHylkO+t3ZWf9/F8NOWDwdk=
 		</data>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		HTKtEImSQPRXRna5KRfrqSC4IEU=
+		3O0L/NqdCeA+4SCmzRNwzr9dAqI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M5VQSdvAvqcHaHI4CffDhe/1h3M=
+			d1sr37wFGuSA7MK32vyK5T507mc=
 			</data>
 			<key>hash2</key>
 			<data>
-			pKhhEru9NSFbtJGPtKx97K+UW4/xZ8B7Kan9U2IfSkI=
+			rQ4gMlPgOZbzU0Ho0YNLNaQk6DavmTRhNfKXFrPfGBs=
 			</data>
 		</dict>
 		<key>Headers/StreamlyzerPlugintvOS.h</key>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DJ7fVQSCkNtLV2jMNBcXI6T/jyU=
+			efd3PHylkO+t3ZWf9/F8NOWDwdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			KTs31jJDrd0JTxZderJRktn85MV4D2p2+DftEjBAXFQ=
+			r/dsZcjawCXZnZo/baoNwzqqXI4ifDDqAoQTJYRLn7Y=
 			</data>
 		</dict>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HTKtEImSQPRXRna5KRfrqSC4IEU=
+			3O0L/NqdCeA+4SCmzRNwzr9dAqI=
 			</data>
 			<key>hash2</key>
 			<data>
-			gPuoMtYzJ9TH4j/eSrzon/J8hugNKrpVvalEjpPFTHc=
+			rm+aFDpm6yBKF3H6k9neWUERpOiEduvZ86GpTyS947I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
