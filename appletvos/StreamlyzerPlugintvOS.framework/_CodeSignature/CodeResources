@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/SZRPlaybackObserver.h</key>
 		<data>
-		uG5VsNimO9XkQ5lc6j76Y1b6dG8=
+		XstlRfbBJhBdpYQt2uS8OiyMfCo=
 		</data>
 		<key>Headers/SZRPlugin.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/StreamlyzerPlugintvOS-Swift.h</key>
 		<data>
-		d1sr37wFGuSA7MK32vyK5T507mc=
+		PvKROT3uRJCXSjU/sKXITO5FLfs=
 		</data>
 		<key>Headers/StreamlyzerPlugintvOS.h</key>
 		<data>
@@ -42,15 +42,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		k0xcD4DEw4otFQyU1LqbDP5VyHM=
+		GQU5X/oE9KZm9R7DinXxcHW3FYI=
 		</data>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		efd3PHylkO+t3ZWf9/F8NOWDwdk=
+		Ik9KDJzrimLstFdNDKmPGjT+vQE=
 		</data>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		3O0L/NqdCeA+4SCmzRNwzr9dAqI=
+		dQLLpwoUsz+avU4wULyAgDWiDLI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,11 +85,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uG5VsNimO9XkQ5lc6j76Y1b6dG8=
+			XstlRfbBJhBdpYQt2uS8OiyMfCo=
 			</data>
 			<key>hash2</key>
 			<data>
-			HIoDiFT3HMaz5oN8yj+nAbBKqnfv6Vyw+No3j+kKZ1M=
+			3tPIyMZ16kYNy5ADh2wacMG1x/PKvF4v2fk918flNl4=
 			</data>
 		</dict>
 		<key>Headers/SZRPlugin.h</key>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d1sr37wFGuSA7MK32vyK5T507mc=
+			PvKROT3uRJCXSjU/sKXITO5FLfs=
 			</data>
 			<key>hash2</key>
 			<data>
-			rQ4gMlPgOZbzU0Ho0YNLNaQk6DavmTRhNfKXFrPfGBs=
+			swFiBQmWo5BuaxHpvg+onpIdAqn3ORcJ+rFQv8ulzeE=
 			</data>
 		</dict>
 		<key>Headers/StreamlyzerPlugintvOS.h</key>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			efd3PHylkO+t3ZWf9/F8NOWDwdk=
+			Ik9KDJzrimLstFdNDKmPGjT+vQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			r/dsZcjawCXZnZo/baoNwzqqXI4ifDDqAoQTJYRLn7Y=
+			KkterLYpRmXUzw6rL/jPxocTh0AXPZthu0HF8DJQVlA=
 			</data>
 		</dict>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3O0L/NqdCeA+4SCmzRNwzr9dAqI=
+			dQLLpwoUsz+avU4wULyAgDWiDLI=
 			</data>
 			<key>hash2</key>
 			<data>
-			rm+aFDpm6yBKF3H6k9neWUERpOiEduvZ86GpTyS947I=
+			8EglCpX1suy6GvGNHIFv0CorGxMwgdaoTwannBQehCY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

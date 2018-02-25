@@ -22,4 +22,3 @@ FOUNDATION_EXPORT const unsigned char StreamlyzerPluginVersionString[];
 #import <StreamlyzerPlugin/SZRSharedContentsObserver.h>
 #import <StreamlyzerPlugin/SZRUserDefinedObserver.h>
 #import <StreamlyzerPlugin/SZRPageReferrerObserver.h>
-
