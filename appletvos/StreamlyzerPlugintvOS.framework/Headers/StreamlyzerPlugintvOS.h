@@ -20,4 +20,3 @@ FOUNDATION_EXPORT const unsigned char StreamlyzerPlugintvOSVersionString[];
 #import <StreamlyzerPlugintvOS/SZRPlaybackObserver.h>
 #import <StreamlyzerPlugintvOS/SZRSharedContentsObserver.h>
 #import <StreamlyzerPlugintvOS/SZRUserDefinedObserver.h>
-#import <StreamlyzerPlugintvOS/SZRPageReferrerObserver.h>
