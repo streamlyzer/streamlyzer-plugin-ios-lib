@@ -254,6 +254,8 @@ SWIFT_PROTOCOL("_TtP21StreamlyzerPlugintvOS25StreamlyzerPluginDelegate_")
 /// To avoid typo in key name, simply setter and getter of each properties are kindly provided
 SWIFT_CLASS("_TtC21StreamlyzerPlugintvOS25StreamlyzerPluginProperty")
 @interface StreamlyzerPluginProperty : NSObject
+/// Define properties array and assign default values to each properties
+@property (nonatomic, copy) NSDictionary * _Nonnull properties;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// Define setter and getter of each properties
 @property (nonatomic, copy) NSString * _Nonnull customerKey;
