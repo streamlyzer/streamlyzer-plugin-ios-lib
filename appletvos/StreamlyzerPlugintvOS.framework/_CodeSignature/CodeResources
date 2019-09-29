@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/StreamlyzerPlugintvOS-Swift.h</key>
 		<data>
-		hLrirZpvyoldXhwVApw1J3l5h+U=
+		enHiSN4Z5n8HkvQEeiuw5sgt084=
 		</data>
 		<key>Headers/StreamlyzerPlugintvOS.h</key>
 		<data>
@@ -38,15 +38,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vJnKAeBItCqWO+qYZY1fJIVcljQ=
+		RKcXmBpdu5a85NIjBWWAHGttgFk=
+		</data>
+		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
+		<data>
+		f5U7zQDpO+Q2/0yqGwbaTHQFir8=
+		</data>
+		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
+		<data>
+		ssoOa54+Z4fO9Q1SMimzhtgBSOw=
 		</data>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		kLFLveUHn4mG7R+IKChXdZOJSs8=
+		f5U7zQDpO+Q2/0yqGwbaTHQFir8=
 		</data>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/jdU9BGi5IvWgFFgmlzXAH6ec5k=
+		ssoOa54+Z4fO9Q1SMimzhtgBSOw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,11 +133,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hLrirZpvyoldXhwVApw1J3l5h+U=
+			enHiSN4Z5n8HkvQEeiuw5sgt084=
 			</data>
 			<key>hash2</key>
 			<data>
-			Xuapa7d6EoBaUWqOM5yrw3bukVZfQYypy6eJofIY740=
+			Sj701IebqBr0SpZmnOJ5EdhUlVySFiP31PZH+9g2aRU=
 			</data>
 		</dict>
 		<key>Headers/StreamlyzerPlugintvOS.h</key>
@@ -143,26 +151,48 @@
 			l7EiZOAdHKgs67RXPLnsApzMhi6qHEBsMHYTwEU0ZAU=
 			</data>
 		</dict>
+		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			f5U7zQDpO+Q2/0yqGwbaTHQFir8=
+			</data>
+			<key>hash2</key>
+			<data>
+			yt0Afr0/tY+pjpWKGJo7KyqSSmKETXkDd3Pr2o7UxiY=
+			</data>
+		</dict>
+		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ssoOa54+Z4fO9Q1SMimzhtgBSOw=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZDolFKuWh98120a9WgtrxbmEFEBnqy98N7DjBZV64HY=
+			</data>
+		</dict>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kLFLveUHn4mG7R+IKChXdZOJSs8=
+			f5U7zQDpO+Q2/0yqGwbaTHQFir8=
 			</data>
 			<key>hash2</key>
 			<data>
-			cMiv4TS44I7y7K8O4B1vf4wvz0aAF6XR2AiyotvCMjk=
+			yt0Afr0/tY+pjpWKGJo7KyqSSmKETXkDd3Pr2o7UxiY=
 			</data>
 		</dict>
 		<key>Modules/StreamlyzerPlugintvOS.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/jdU9BGi5IvWgFFgmlzXAH6ec5k=
+			ssoOa54+Z4fO9Q1SMimzhtgBSOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ns8igvM3mulyP3Nbc2iJDoyFObGW5WHJVJhFlDTZDYs=
+			ZDolFKuWh98120a9WgtrxbmEFEBnqy98N7DjBZV64HY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
